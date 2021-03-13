@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AvSelectorConfig DoubleClickTray="Default Monitors">
+  <MenuItems>
+
+    <MenuItem Name="TV as primary monitor">
+      <Hotkey Char="3" ModAlt="True"/>
+      <TargetStates>
+        <State Type="DisplaySettings">
+          <Target FriendlyName="LG TV" />
+          <Enabled Value="True" />
+          <Resolution Width="3840" Height="2160" BitsPerPixel="32" />
+          <LocationRelativeToTarget FriendlyName="Acer X34" X="3440" Y="0" />
+        </State>
+        <State Type="PrimaryDisplay">
+          <Target FriendlyName="LG TV" />
+        </State>
+        <State Type="DefaultAudioDevice">
+          <WaitUntilDisplayEnabledComplete Value="True" DelayMs="8500"/>
+          <!-- This audio device only exists when the HDMI is enabled --> 
+          <AudioDevice FriendlyName="*NVIDIA High Definition Audio)" />
+        </State>
+      </TargetStates>
+    </MenuItem>
+
+    <MenuItem Name="TV enabled">
+      <Hotkey Char="2" ModAlt="True"/>
+      <TargetStates>
+        <State Type="DisplaySettings">
+          <Target FriendlyName="LG TV" />
+          <Enabled Value="True" />
+          <Resolution Width="1920" Height="1080" BitsPerPixel="32" />
+          <LocationRelativeToTarget FriendlyName="Acer X34" X="3440" Y="0" />
+        </State>
+        <State Type="DefaultAudioDevice">
+          <WaitUntilDisplayEnabledComplete Value="True" DelayMs="8300"/>
+          <!-- This audio device only exists when the HDMI is enabled -->
+          <AudioDevice FriendlyName="*NVIDIA High Definition Audio)" />
+        </State>
+      </TargetStates>
+    </MenuItem>
+
+    <MenuItem Name="Default Monitors">
+      <Hotkey Char="1" ModAlt="True"/>
+      <TargetStates>
+        <State Type="DefaultAudioDevice">
+          <AudioDevice FriendlyName="*Speakers*" />
+        </State>
+        <State Type="PrimaryDisplay">
+          <Target FriendlyName="Acer X34" />
+        </State>
+        <State Type="DisplaySettings">
+          <Target FriendlyName="LG TV" />
+          <Enabled Value="False" />
+        </State>
+      </TargetStates>
+    </MenuItem>
+
+    <MenuItem Name="SBZ Sound">
+      <Hotkey Char="Z" ModAlt="True"/>
+      <TargetStates>
+        <State Type="DefaultAudioDevice">
+          <AudioDevice FriendlyName="*Speakers*" />
+        </State>
+      </TargetStates>
+    </MenuItem>
+
+    <MenuItem Name="BTH Headset">
+      <Hotkey Char="X" ModAlt="True"/>
+      <TargetStates>
+        <State Type="DefaultAudioDevice">
+          <AudioDevice FriendlyName="*Headphones*" />
+        </State>
+      </TargetStates>
+    </MenuItem>
+
+  </MenuItems>
+</AvSelectorConfig>
